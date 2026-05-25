@@ -417,7 +417,7 @@ hcol1, hcol2 = st.columns([4, 1.2])
 with hcol1:
 
     st.markdown("""
-    ## 📦 DASHBOARD SIMULASI SISTEM ANTRIAN SORTIR PAKET
+    ## DASHBOARD SIMULASI SISTEM ANTRIAN SORTIR PAKET
     """)
 
     st.markdown("""
@@ -426,16 +426,9 @@ with hcol1:
     Simulasi dan Analisis Kinerja Sistem Antrian Sortir Paket
     pada Layanan Ekspedisi Menggunakan SimPy
 
-    <br><br>
-
-    👩‍💻 <b>Shefira Marizcha</b> (202310370311027)
-
-    <br>
-
-    🏫 Universitas Muhammadiyah Malang
-
     </span>
     """, unsafe_allow_html=True)
+
 with hcol2:
     mc1, mc2 = st.columns(2)
     with mc1:
@@ -714,12 +707,42 @@ st.markdown("<div style='height:6px'></div>", unsafe_allow_html=True)
 
 st.markdown(f"""
 <div class="custom-footer">
-    Simulasi menggunakan <span class="footer-highlight">SimPy</span>
+
+    👩‍💻 <span class="footer-highlight">Shefira Marizcha</span>
+    (202310370311027)
+
     &nbsp;|&nbsp;
-    Model: <span class="footer-highlight">M/M/c Priority Queue</span>
+
+    🏫 <span class="footer-highlight">
+    Universitas Muhammadiyah Malang
+    </span>
+
+    <br><br>
+
+    Simulasi menggunakan
+    <span class="footer-highlight">SimPy</span>
+
     &nbsp;|&nbsp;
-    Iterasi: <span class="footer-highlight">{int(df['Iteration'].max()):,}</span> per skenario
+
+    Model:
+    <span class="footer-highlight">
+    M/M/c Priority Queue
+    </span>
+
     &nbsp;|&nbsp;
-    Durasi Simulasi: <span class="footer-highlight">480 menit</span>
+
+    Iterasi:
+    <span class="footer-highlight">
+    {int(df['Iteration'].max()):,}
+    </span>
+    per skenario
+
+    &nbsp;|&nbsp;
+
+    Durasi Simulasi:
+    <span class="footer-highlight">
+    480 menit
+    </span>
+
 </div>
 """, unsafe_allow_html=True)
