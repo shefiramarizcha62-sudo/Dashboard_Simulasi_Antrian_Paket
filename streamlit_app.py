@@ -703,46 +703,83 @@ for col, (title, value, desc, bg, accent) in zip([b1, b2, b3, b4], insight_cards
 # FOOTER
 # =========================================================
 
-st.markdown("<div style='height:6px'></div>", unsafe_allow_html=True)
+st.markdown("<div style='height:15px'></div>", unsafe_allow_html=True)
 
-st.markdown(f"""
-<div class="custom-footer">
+footer1, footer2, footer3, footer4 = st.columns(4)
 
-    👩‍💻 <span class="footer-highlight">
-    Shefira Marizcha
-    </span>
+with footer1:
+    st.markdown("""
+    <div class="insight-card">
+        <div style="font-size:12px;color:#FF8C42;font-weight:700;">
+            👩‍💻 AUTHOR
+        </div>
 
-    &nbsp;|&nbsp;
+        <div style="font-size:18px;font-weight:800;color:white;margin-top:8px;">
+            Shefira Marizcha
+        </div>
 
-    🏫 <span class="footer-highlight">
-    Universitas Muhammadiyah Malang
-    </span>
+        <div style="font-size:13px;color:#C9C9C9;margin-top:6px;">
+            202310370311027
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    <br><br>
+with footer2:
+    st.markdown("""
+    <div class="insight-card">
+        <div style="font-size:12px;color:#FF8C42;font-weight:700;">
+            🏫 UNIVERSITAS
+        </div>
 
-    Simulasi menggunakan
-    <span class="footer-highlight">SimPy</span>
+        <div style="font-size:16px;font-weight:700;color:white;margin-top:8px;">
+            Universitas Muhammadiyah Malang
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    &nbsp;|&nbsp;
+with footer3:
+    st.markdown(f"""
+    <div class="insight-card">
+        <div style="font-size:12px;color:#FF8C42;font-weight:700;">
+            ⚙️ MODEL
+        </div>
 
-    Model:
-    <span class="footer-highlight">
-    M/M/c Priority Queue
-    </span>
+        <div style="font-size:16px;font-weight:700;color:white;margin-top:8px;">
+            M/M/c Priority Queue
+        </div>
 
-    &nbsp;|&nbsp;
+        <div style="font-size:13px;color:#C9C9C9;margin-top:6px;">
+            SimPy Simulation
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    Iterasi:
-    <span class="footer-highlight">
-    {int(df['Iteration'].max()):,}
-    </span>
+with footer4:
+    st.markdown(f"""
+    <div class="insight-card">
+        <div style="font-size:12px;color:#FF8C42;font-weight:700;">
+            📊 ITERASI
+        </div>
 
-    &nbsp;|&nbsp;
+        <div style="font-size:20px;font-weight:800;color:white;margin-top:8px;">
+            {int(df['Iteration'].max()):,}
+        </div>
 
-    Durasi:
-    <span class="footer-highlight">
-    480 menit
-    </span>
+        <div style="font-size:13px;color:#C9C9C9;margin-top:6px;">
+            per skenario
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
+st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="
+text-align:center;
+color:#8E8E8E;
+font-size:12px;
+padding-bottom:20px;
+">
+Dashboard Simulasi Sistem Antrian Sortir Paket • Streamlit • Plotly • SimPy
 </div>
 """, unsafe_allow_html=True)
