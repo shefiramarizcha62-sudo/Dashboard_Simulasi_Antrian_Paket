@@ -417,10 +417,26 @@ hcol1, hcol2 = st.columns([4, 1.2])
 with hcol1:
     st.markdown("""
     <div class="dashboard-header">
-        <div class="dashboard-title">📦 DASHBOARD SIMULASI SISTEM ANTRIAN SORTIR PAKET</div>
-        <div class="dashboard-subtitle">
-            Simulasi dan Analisis Kinerja Sistem Antrian Sortir Paket pada Layanan Ekspedisi Menggunakan SimPy
+
+        <div class="dashboard-title">
+        📦 DASHBOARD SIMULASI SISTEM ANTRIAN SORTIR PAKET
         </div>
+
+        <div class="dashboard-subtitle">
+
+            Simulasi dan Analisis Kinerja Sistem Antrian Sortir Paket
+            pada Layanan Ekspedisi Menggunakan SimPy
+
+            <br><br>
+
+            👩‍💻 <b>Shefira Marizcha</b> (202310370311027)
+
+            <br>
+
+            🏫 Universitas Muhammadiyah Malang
+
+        </div>
+
     </div>
     """, unsafe_allow_html=True)
 
