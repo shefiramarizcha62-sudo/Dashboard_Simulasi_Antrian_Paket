@@ -708,105 +708,164 @@ for col, (title, value, desc, bg, accent) in zip([b1, b2, b3, b4], insight_cards
 # FOOTER
 # =========================================================
 
-st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+st.markdown("<div style='height:15px'></div>", unsafe_allow_html=True)
 
 f1, f2, f3, f4 = st.columns(4)
 
-card_style = """
-background: rgba(18,18,18,0.92);
-padding: 22px;
-border-radius: 22px;
-border: 1px solid rgba(255,255,255,0.08);
-box-shadow: 0 0 18px rgba(255,107,0,0.08);
-height: 150px;
-"""
-
-title_style = """
-font-size: 13px;
-font-weight: 800;
-color: #FF8C42;
-margin-bottom: 15px;
-letter-spacing: 0.5px;
-"""
-
-value_style = """
-font-size: 24px;
-font-weight: 800;
-color: white;
-line-height: 1.3;
-"""
-
-desc_style = """
-font-size: 14px;
-color: #C9C9C9;
-margin-top: 10px;
-"""
-
 with f1:
-    st.markdown(f"""
-    <div style="{card_style}">
-        <div style="{title_style}">
+    st.markdown("""
+    <div style="
+        background:#111111;
+        padding:22px;
+        border-radius:22px;
+        border:1px solid rgba(255,255,255,0.08);
+        box-shadow:0 0 18px rgba(255,107,0,0.08);
+        height:140px;
+    ">
+
+        <div style="
+            color:#FF8C42;
+            font-size:13px;
+            font-weight:800;
+            margin-bottom:14px;
+        ">
             👩‍💻 AUTHOR
         </div>
 
-        <div style="{value_style}">
+        <div style="
+            color:white;
+            font-size:24px;
+            font-weight:800;
+        ">
             Shefira Marizcha
         </div>
 
-        <div style="{desc_style}">
+        <div style="
+            color:#C9C9C9;
+            font-size:14px;
+            margin-top:10px;
+        ">
             202310370311027
         </div>
+
     </div>
     """, unsafe_allow_html=True)
 
 with f2:
-    st.markdown(f"""
-    <div style="{card_style}">
-        <div style="{title_style}">
+    st.markdown("""
+    <div style="
+        background:#111111;
+        padding:22px;
+        border-radius:22px;
+        border:1px solid rgba(255,255,255,0.08);
+        box-shadow:0 0 18px rgba(255,107,0,0.08);
+        height:140px;
+    ">
+
+        <div style="
+            color:#FF8C42;
+            font-size:13px;
+            font-weight:800;
+            margin-bottom:14px;
+        ">
             🏫 UNIVERSITAS
         </div>
 
-        <div style="{value_style}">
+        <div style="
+            color:white;
+            font-size:18px;
+            font-weight:800;
+            line-height:1.4;
+        ">
             Universitas Muhammadiyah Malang
         </div>
 
-        <div style="{desc_style}">
+        <div style="
+            color:#C9C9C9;
+            font-size:14px;
+            margin-top:10px;
+        ">
             Fakultas Teknik
         </div>
+
     </div>
     """, unsafe_allow_html=True)
 
 with f3:
-    st.markdown(f"""
-    <div style="{card_style}">
-        <div style="{title_style}">
+    st.markdown("""
+    <div style="
+        background:#111111;
+        padding:22px;
+        border-radius:22px;
+        border:1px solid rgba(255,255,255,0.08);
+        box-shadow:0 0 18px rgba(255,107,0,0.08);
+        height:140px;
+    ">
+
+        <div style="
+            color:#FF8C42;
+            font-size:13px;
+            font-weight:800;
+            margin-bottom:14px;
+        ">
             ⚙️ MODEL
         </div>
 
-        <div style="{value_style}">
+        <div style="
+            color:white;
+            font-size:20px;
+            font-weight:800;
+        ">
             M/M/c Priority Queue
         </div>
 
-        <div style="{desc_style}">
+        <div style="
+            color:#C9C9C9;
+            font-size:14px;
+            margin-top:10px;
+        ">
             SimPy Simulation
         </div>
+
     </div>
     """, unsafe_allow_html=True)
 
 with f4:
     st.markdown(f"""
-    <div style="{card_style}">
-        <div style="{title_style}">
+    <div style="
+        background:#111111;
+        padding:22px;
+        border-radius:22px;
+        border:1px solid rgba(255,255,255,0.08);
+        box-shadow:0 0 18px rgba(255,107,0,0.08);
+        height:140px;
+    ">
+
+        <div style="
+            color:#FF8C42;
+            font-size:13px;
+            font-weight:800;
+            margin-bottom:14px;
+        ">
             📊 ITERASI
         </div>
 
-        <div style="{value_style}">
+        <div style="
+            color:white;
+            font-size:24px;
+            font-weight:800;
+        ">
             {int(df['Iteration'].max()):,}
         </div>
 
-        <div style="{desc_style}">
+        <div style="
+            color:#C9C9C9;
+            font-size:14px;
+            margin-top:10px;
+        ">
             per skenario
         </div>
+
     </div>
     """, unsafe_allow_html=True)
 
