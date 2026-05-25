@@ -295,13 +295,18 @@ div[role="option"]:hover {
 /* ---- HIDE STREAMLIT DEFAULTS ---- */
 #MainMenu { visibility: hidden; }
 footer { visibility: hidden; }
-header { visibility: hidden; }
+
 
 /* ---- OVERRIDE STREAMLIT METRIC ---- */
 [data-testid="stMetricValue"] { color: white !important; }
 [data-testid="stMetricLabel"] { color: #C9C9C9 !important; }
 
 </style>
+button[kind="header"] {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 """, unsafe_allow_html=True)
 
 # =========================================================
@@ -703,83 +708,41 @@ for col, (title, value, desc, bg, accent) in zip([b1, b2, b3, b4], insight_cards
 # FOOTER
 # =========================================================
 
-st.markdown("<div style='height:15px'></div>", unsafe_allow_html=True)
+st.divider()
 
-footer1, footer2, footer3, footer4 = st.columns(4)
+f1, f2, f3, f4 = st.columns(4)
 
-with footer1:
-    st.markdown("""
-    <div class="insight-card">
-        <div style="font-size:12px;color:#FF8C42;font-weight:700;">
-            👩‍💻 AUTHOR
-        </div>
+with f1:
+    st.info("""
+👩‍💻 AUTHOR
 
-        <div style="font-size:18px;font-weight:800;color:white;margin-top:8px;">
-            Shefira Marizcha
-        </div>
+Shefira Marizcha  
+202310370311027
+""")
 
-        <div style="font-size:13px;color:#C9C9C9;margin-top:6px;">
-            202310370311027
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+with f2:
+    st.info("""
+🏫 UNIVERSITAS
 
-with footer2:
-    st.markdown("""
-    <div class="insight-card">
-        <div style="font-size:12px;color:#FF8C42;font-weight:700;">
-            🏫 UNIVERSITAS
-        </div>
+Universitas Muhammadiyah Malang
+""")
 
-        <div style="font-size:16px;font-weight:700;color:white;margin-top:8px;">
-            Universitas Muhammadiyah Malang
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+with f3:
+    st.info("""
+⚙️ MODEL
 
-with footer3:
-    st.markdown(f"""
-    <div class="insight-card">
-        <div style="font-size:12px;color:#FF8C42;font-weight:700;">
-            ⚙️ MODEL
-        </div>
+M/M/c Priority Queue  
+SimPy Simulation
+""")
 
-        <div style="font-size:16px;font-weight:700;color:white;margin-top:8px;">
-            M/M/c Priority Queue
-        </div>
+with f4:
+    st.info(f"""
+📊 ITERASI
 
-        <div style="font-size:13px;color:#C9C9C9;margin-top:6px;">
-            SimPy Simulation
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+{int(df['Iteration'].max()):,}  
+per skenario
+""")
 
-with footer4:
-    st.markdown(f"""
-    <div class="insight-card">
-        <div style="font-size:12px;color:#FF8C42;font-weight:700;">
-            📊 ITERASI
-        </div>
-
-        <div style="font-size:20px;font-weight:800;color:white;margin-top:8px;">
-            {int(df['Iteration'].max()):,}
-        </div>
-
-        <div style="font-size:13px;color:#C9C9C9;margin-top:6px;">
-            per skenario
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
-
-st.markdown("""
-<div style="
-text-align:center;
-color:#8E8E8E;
-font-size:12px;
-padding-bottom:20px;
-">
-Dashboard Simulasi Sistem Antrian Sortir Paket • Streamlit • Plotly • SimPy
-</div>
-""", unsafe_allow_html=True)
+st.caption(
+    "Dashboard Simulasi Sistem Antrian Sortir Paket • Streamlit • Plotly • SimPy"
+)
