@@ -708,176 +708,46 @@ for col, (title, value, desc, bg, accent) in zip([b1, b2, b3, b4], insight_cards
 # FOOTER
 # =========================================================
 
-st.markdown("<div style='height:15px'></div>", unsafe_allow_html=True)
+st.divider()
 
-f1, f2, f3, f4 = st.columns(4)
+c1, c2, c3, c4 = st.columns(4)
 
-with f1:
-    st.markdown("""
-    <div style="
-        background:#111111;
-        padding:22px;
-        border-radius:22px;
-        border:1px solid rgba(255,255,255,0.08);
-        box-shadow:0 0 18px rgba(255,107,0,0.08);
-        height:140px;
-    ">
+with c1:
+    with st.container(border=True):
 
-        <div style="
-            color:#FF8C42;
-            font-size:13px;
-            font-weight:800;
-            margin-bottom:14px;
-        ">
-            👩‍💻 AUTHOR
-        </div>
+        st.caption("👩‍💻 AUTHOR")
 
-        <div style="
-            color:white;
-            font-size:24px;
-            font-weight:800;
-        ">
-            Shefira Marizcha
-        </div>
+        st.markdown("### Shefira Marizcha")
 
-        <div style="
-            color:#C9C9C9;
-            font-size:14px;
-            margin-top:10px;
-        ">
-            202310370311027
-        </div>
+        st.write("202310370311027")
 
-    </div>
-    """, unsafe_allow_html=True)
+with c2:
+    with st.container(border=True):
 
-with f2:
-    st.markdown("""
-    <div style="
-        background:#111111;
-        padding:22px;
-        border-radius:22px;
-        border:1px solid rgba(255,255,255,0.08);
-        box-shadow:0 0 18px rgba(255,107,0,0.08);
-        height:140px;
-    ">
+        st.caption("🏫 UNIVERSITAS")
 
-        <div style="
-            color:#FF8C42;
-            font-size:13px;
-            font-weight:800;
-            margin-bottom:14px;
-        ">
-            🏫 UNIVERSITAS
-        </div>
+        st.markdown("### Universitas Muhammadiyah Malang")
 
-        <div style="
-            color:white;
-            font-size:18px;
-            font-weight:800;
-            line-height:1.4;
-        ">
-            Universitas Muhammadiyah Malang
-        </div>
+        st.write("Fakultas Teknik")
 
-        <div style="
-            color:#C9C9C9;
-            font-size:14px;
-            margin-top:10px;
-        ">
-            Fakultas Teknik
-        </div>
+with c3:
+    with st.container(border=True):
 
-    </div>
-    """, unsafe_allow_html=True)
+        st.caption("⚙️ MODEL")
 
-with f3:
-    st.markdown("""
-    <div style="
-        background:#111111;
-        padding:22px;
-        border-radius:22px;
-        border:1px solid rgba(255,255,255,0.08);
-        box-shadow:0 0 18px rgba(255,107,0,0.08);
-        height:140px;
-    ">
+        st.markdown("### M/M/c Priority Queue")
 
-        <div style="
-            color:#FF8C42;
-            font-size:13px;
-            font-weight:800;
-            margin-bottom:14px;
-        ">
-            ⚙️ MODEL
-        </div>
+        st.write("SimPy Simulation")
 
-        <div style="
-            color:white;
-            font-size:20px;
-            font-weight:800;
-        ">
-            M/M/c Priority Queue
-        </div>
+with c4:
+    with st.container(border=True):
 
-        <div style="
-            color:#C9C9C9;
-            font-size:14px;
-            margin-top:10px;
-        ">
-            SimPy Simulation
-        </div>
+        st.caption("📊 ITERASI")
 
-    </div>
-    """, unsafe_allow_html=True)
+        st.markdown(f"### {int(df['Iteration'].max()):,}")
 
-with f4:
-    st.markdown(f"""
-    <div style="
-        background:#111111;
-        padding:22px;
-        border-radius:22px;
-        border:1px solid rgba(255,255,255,0.08);
-        box-shadow:0 0 18px rgba(255,107,0,0.08);
-        height:140px;
-    ">
+        st.write("per skenario")
 
-        <div style="
-            color:#FF8C42;
-            font-size:13px;
-            font-weight:800;
-            margin-bottom:14px;
-        ">
-            📊 ITERASI
-        </div>
-
-        <div style="
-            color:white;
-            font-size:24px;
-            font-weight:800;
-        ">
-            {int(df['Iteration'].max()):,}
-        </div>
-
-        <div style="
-            color:#C9C9C9;
-            font-size:14px;
-            margin-top:10px;
-        ">
-            per skenario
-        </div>
-
-    </div>
-    """, unsafe_allow_html=True)
-
-st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
-
-st.markdown("""
-<div style="
-text-align:center;
-color:#8E8E8E;
-font-size:12px;
-padding-bottom:20px;
-">
-Dashboard Simulasi Sistem Antrian Sortir Paket • Streamlit • Plotly • SimPy
-</div>
-""", unsafe_allow_html=True)
+st.caption(
+    "Dashboard Simulasi Sistem Antrian Sortir Paket • Streamlit • Plotly • SimPy"
+)
