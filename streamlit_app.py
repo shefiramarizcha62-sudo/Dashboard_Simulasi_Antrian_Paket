@@ -708,8 +708,9 @@ st.markdown("<div style='height:6px'></div>", unsafe_allow_html=True)
 st.markdown(f"""
 <div class="custom-footer">
 
-    👩‍💻 <span class="footer-highlight">Shefira Marizcha</span>
-    (202310370311027)
+    👩‍💻 <span class="footer-highlight">
+    Shefira Marizcha
+    </span>
 
     &nbsp;|&nbsp;
 
@@ -735,11 +736,10 @@ st.markdown(f"""
     <span class="footer-highlight">
     {int(df['Iteration'].max()):,}
     </span>
-    per skenario
 
     &nbsp;|&nbsp;
 
-    Durasi Simulasi:
+    Durasi:
     <span class="footer-highlight">
     480 menit
     </span>
