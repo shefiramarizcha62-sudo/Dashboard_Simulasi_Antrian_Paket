@@ -708,41 +708,117 @@ for col, (title, value, desc, bg, accent) in zip([b1, b2, b3, b4], insight_cards
 # FOOTER
 # =========================================================
 
-st.divider()
+st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
 
 f1, f2, f3, f4 = st.columns(4)
 
-with f1:
-    st.info("""
-👩‍💻 AUTHOR
+card_style = """
+background: rgba(18,18,18,0.92);
+padding: 22px;
+border-radius: 22px;
+border: 1px solid rgba(255,255,255,0.08);
+box-shadow: 0 0 18px rgba(255,107,0,0.08);
+height: 150px;
+"""
 
-Shefira Marizcha  
-202310370311027
-""")
+title_style = """
+font-size: 13px;
+font-weight: 800;
+color: #FF8C42;
+margin-bottom: 15px;
+letter-spacing: 0.5px;
+"""
+
+value_style = """
+font-size: 24px;
+font-weight: 800;
+color: white;
+line-height: 1.3;
+"""
+
+desc_style = """
+font-size: 14px;
+color: #C9C9C9;
+margin-top: 10px;
+"""
+
+with f1:
+    st.markdown(f"""
+    <div style="{card_style}">
+        <div style="{title_style}">
+            👩‍💻 AUTHOR
+        </div>
+
+        <div style="{value_style}">
+            Shefira Marizcha
+        </div>
+
+        <div style="{desc_style}">
+            202310370311027
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with f2:
-    st.info("""
-🏫 UNIVERSITAS
+    st.markdown(f"""
+    <div style="{card_style}">
+        <div style="{title_style}">
+            🏫 UNIVERSITAS
+        </div>
 
-Universitas Muhammadiyah Malang
-""")
+        <div style="{value_style}">
+            Universitas Muhammadiyah Malang
+        </div>
+
+        <div style="{desc_style}">
+            Fakultas Teknik
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with f3:
-    st.info("""
-⚙️ MODEL
+    st.markdown(f"""
+    <div style="{card_style}">
+        <div style="{title_style}">
+            ⚙️ MODEL
+        </div>
 
-M/M/c Priority Queue  
-SimPy Simulation
-""")
+        <div style="{value_style}">
+            M/M/c Priority Queue
+        </div>
+
+        <div style="{desc_style}">
+            SimPy Simulation
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with f4:
-    st.info(f"""
-📊 ITERASI
+    st.markdown(f"""
+    <div style="{card_style}">
+        <div style="{title_style}">
+            📊 ITERASI
+        </div>
 
-{int(df['Iteration'].max()):,}  
-per skenario
-""")
+        <div style="{value_style}">
+            {int(df['Iteration'].max()):,}
+        </div>
 
-st.caption(
-    "Dashboard Simulasi Sistem Antrian Sortir Paket • Streamlit • Plotly • SimPy"
-)
+        <div style="{desc_style}">
+            per skenario
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="
+text-align:center;
+color:#8E8E8E;
+font-size:12px;
+padding-bottom:20px;
+">
+Dashboard Simulasi Sistem Antrian Sortir Paket • Streamlit • Plotly • SimPy
+</div>
+""", unsafe_allow_html=True)
