@@ -415,11 +415,12 @@ with st.sidebar:
 hcol1, hcol2 = st.columns([4, 1.2])
 
 with hcol1:
-    st.markdown("""
+
+    header_html = """
     <div class="dashboard-header">
 
         <div class="dashboard-title">
-        📦 DASHBOARD SIMULASI SISTEM ANTRIAN SORTIR PAKET
+            📦 DASHBOARD SIMULASI SISTEM ANTRIAN SORTIR PAKET
         </div>
 
         <div class="dashboard-subtitle">
@@ -438,8 +439,12 @@ with hcol1:
         </div>
 
     </div>
-    """, unsafe_allow_html=True)
+    """
 
+    st.markdown(
+        header_html,
+        unsafe_allow_html=True
+    )
 with hcol2:
     mc1, mc2 = st.columns(2)
     with mc1:
